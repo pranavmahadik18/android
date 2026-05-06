@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/colorSurface">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="4dp"
+        android:paddingEnd="12dp">
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_back"
+            android:background="@android:color/transparent"
+            android:contentDescription="Back"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🗳️ Poll / मतदान"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:paddingStart="4dp"/>
+    </LinearLayout>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <!-- Admin Create Poll -->
+            <LinearLayout
+                android:id="@+id/adminPanel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/card_poll"
+                android:padding="14dp"
+                android:layout_marginBottom="16dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Create New Poll / नवीन मतदान तयार करा"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_marginBottom="10dp"/>
+
+                <EditText android:id="@+id/etQuestion" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:hint="Question / प्रश्न *"
+                    android:background="@android:color/white" android:padding="10dp"
+                    android:layout_marginBottom="8dp" android:minLines="2" android:gravity="top"/>
+
+                <EditText android:id="@+id/etOpt1" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:hint="Option 1 / पर्याय 1 *"
+                    android:background="@android:color/white" android:padding="10dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <EditText android:id="@+id/etOpt2" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:hint="Option 2 / पर्याय 2 *"
+                    android:background="@android:color/white" android:padding="10dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <EditText android:id="@+id/etOpt3" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:hint="Option 3 / पर्याय 3 (optional)"
+                    android:background="@android:color/white" android:padding="10dp"
+                    android:layout_marginBottom="10dp"/>
+
+                <Button android:id="@+id/btnCreatePoll" android:layout_width="match_parent"
+                    android:layout_height="44dp" android:text="Create Poll / मतदान तयार करा"
+                    android:backgroundTint="@color/colorPrimary" android:textColor="@color/white"/>
+            </LinearLayout>
+
+            <!-- No Poll -->
+            <LinearLayout
+                android:id="@+id/noDataSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="40dp"
+                android:visibility="gone">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="🗳️" android:textSize="48sp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="No active poll.\nकोणतेही सक्रिय मतदान नाही."
+                    android:textColor="@color/text_secondary" android:gravity="center"
+                    android:layout_marginTop="8dp"/>
+            </LinearLayout>
+
+            <!-- Active Poll Section -->
+            <LinearLayout
+                android:id="@+id/pollSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <androidx.cardview.widget.CardView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp"
+                    app:cardBackgroundColor="@color/card_poll">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:id="@+id/tvQuestion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/text_primary"
+                            android:layout_marginBottom="16dp"/>
+
+                        <Button android:id="@+id/btnVote1" android:layout_width="match_parent"
+                            android:layout_height="44dp" android:backgroundTint="@color/colorPrimary"
+                            android:textColor="@color/white" android:layout_marginBottom="8dp"/>
+
+                        <Button android:id="@+id/btnVote2" android:layout_width="match_parent"
+                            android:layout_height="44dp" android:backgroundTint="@color/colorPrimary"
+                            android:textColor="@color/white" android:layout_marginBottom="8dp"/>
+
+                        <Button android:id="@+id/btnVote3" android:layout_width="match_parent"
+                            android:layout_height="44dp" android:backgroundTint="@color/colorPrimary"
+                            android:textColor="@color/white" android:layout_marginBottom="8dp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Results Card -->
+                <androidx.cardview.widget.CardView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:id="@+id/tvTotalVotes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimary"
+                            android:layout_marginBottom="12dp"/>
+
+                        <TextView android:id="@+id/tvOpt1Votes" android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:textSize="13sp"
+                            android:textColor="@color/text_primary" android:layout_marginBottom="4dp"/>
+                        <ProgressBar android:id="@+id/pb1" style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent" android:layout_height="12dp"
+                            android:max="100" android:layout_marginBottom="10dp"
+                            android:progressTint="@color/colorPrimary"/>
+
+                        <TextView android:id="@+id/tvOpt2Votes" android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:textSize="13sp"
+                            android:textColor="@color/text_primary" android:layout_marginBottom="4dp"/>
+                        <ProgressBar android:id="@+id/pb2" style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent" android:layout_height="12dp"
+                            android:max="100" android:layout_marginBottom="10dp"
+                            android:progressTint="@color/colorAccent"/>
+
+                        <TextView android:id="@+id/tvOpt3Votes" android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:textSize="13sp"
+                            android:textColor="@color/text_primary" android:layout_marginBottom="4dp"/>
+                        <ProgressBar android:id="@+id/pb3" style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent" android:layout_height="12dp"
+                            android:max="100" android:progressTint="@color/green"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

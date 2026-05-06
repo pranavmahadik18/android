@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="card_ann">#E3F2FD</color>
+    <color name="card_bg">#FFFFFF</color>
+    <color name="card_complaint">#FCE4EC</color>
+    <color name="card_emergency">#FFEBEE</color>
+    <color name="card_poll">#FFF8E1</color>
+    <color name="card_ration">#F3E5F5</color>
+    <color name="card_water">#E0F7FA</color>
+    <color name="colorAccent">#FF8F00</color>
+    <color name="colorPrimary">#1565C0</color>
+    <color name="colorPrimaryDark">#0D47A1</color>
+    <color name="divider">#E0E0E0</color>
+    <color name="emergency_red_bg">#FFEBEE</color>
+    <color name="green">#2E7D32</color>
+    <color name="info_blue_bg">#E3F2FD</color>
+    <color name="light_bg">#F5F5F5</color>
+    <color name="orange">#E65100</color>
+    <color name="red">#C62828</color>
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="warning_orange_bg">#FFF3E0</color>
+    <color name="white">#FFFFFF</color>
+    <string name="announcement">📢 Announcements\nघोषणा</string>
+    <string name="app_name">E-Grampanchayat</string>
+    <string name="app_name_marathi">ई-ग्रामपंचायत</string>
+    <string name="btn_admin_login">🔑 Admin Login / प्रशासक</string>
+    <string name="btn_user_login">👤 User Login / वापरकर्ता</string>
+    <string name="complaint">📝 Complaints\nतक्रारी</string>
+    <string name="emergency">🚨 Emergency\nआणीबाणी</string>
+    <string name="login_title">E-Grampanchayat\nई-ग्रामपंचायत</string>
+    <string name="password_hint">Password / पासवर्ड</string>
+    <string name="poll">🗳️ Poll\nमतदान</string>
+    <string name="ration">🌾 Ration\nरेशन</string>
+    <string name="username_hint">Username / युजरनेम</string>
+    <string name="water">💧 Water Supply\nपाणीपुरवठा</string>
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
+        <item name="colorSecondary">@color/colorAccent</item>
+        <item name="android:windowBackground">?attr/colorSurface</item>
+    </style>
+    <style name="AppTheme.ActionBar" parent="Widget.AppCompat.ActionBar">
+        <item name="background">@color/colorPrimary</item>
+        <item name="titleTextStyle">@style/AppTheme.ActionBar.Title</item>
+    </style>
+    <style name="AppTheme.ActionBar.Title" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/white</item>
+    </style>
+</resources>

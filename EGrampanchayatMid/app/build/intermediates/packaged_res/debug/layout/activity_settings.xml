@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/colorSurface">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="4dp">
+        <ImageButton android:id="@+id/btnBack" android:layout_width="48dp"
+            android:layout_height="48dp" android:src="@drawable/ic_back"
+            android:background="@android:color/transparent" android:contentDescription="Back"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="⚙️ Settings / सेटिंग्ज" android:textColor="@color/white"
+            android:textSize="17sp" android:textStyle="bold" android:paddingStart="4dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Dark Mode Setting -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="?attr/selectableItemBackground"
+            android:layout_marginBottom="8dp">
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="🌙 Dark Mode / गडद मोड"
+                    android:textSize="15sp" android:textColor="?attr/colorOnSurface"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Switch between light and dark"
+                    android:textSize="12sp" android:textColor="@color/text_secondary"/>
+            </LinearLayout>
+
+            <Switch android:id="@+id/switchDark" android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider"/>
+
+        <!-- Language Setting -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="?attr/selectableItemBackground"
+            android:layout_marginTop="8dp">
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="🌐 Marathi / मराठी"
+                    android:textSize="15sp" android:textColor="?attr/colorOnSurface"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Toggle Marathi / English"
+                    android:textSize="12sp" android:textColor="@color/text_secondary"/>
+            </LinearLayout>
+
+            <Switch android:id="@+id/switchMarathi" android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <View android:layout_width="match_parent" android:layout_height="1dp"
+            android:background="@color/divider" android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="App Version: 1.0\nDeveloped for E-Grampanchayat\nई-ग्रामपंचायत डिजिटल सेवा"
+            android:textSize="12sp"
+            android:textColor="@color/text_secondary"
+            android:gravity="center"
+            android:padding="24dp"/>
+    </LinearLayout>
+</LinearLayout>

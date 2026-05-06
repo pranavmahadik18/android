@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">E-Grampanchayat</string>
+    <string name="app_name_marathi">ई-ग्रामपंचायत</string>
+    <string name="login_title">E-Grampanchayat\nई-ग्रामपंचायत</string>
+    <string name="btn_user_login">👤 User Login / वापरकर्ता</string>
+    <string name="btn_admin_login">🔑 Admin Login / प्रशासक</string>
+    <string name="username_hint">Username / युजरनेम</string>
+    <string name="password_hint">Password / पासवर्ड</string>
+    <string name="announcement">📢 Announcements\nघोषणा</string>
+    <string name="complaint">📝 Complaints\nतक्रारी</string>
+    <string name="water">💧 Water Supply\nपाणीपुरवठा</string>
+    <string name="ration">🌾 Ration\nरेशन</string>
+    <string name="poll">🗳️ Poll\nमतदान</string>
+    <string name="emergency">🚨 Emergency\nआणीबाणी</string>
+</resources>

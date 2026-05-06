@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/colorSurface">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="4dp"
+        android:paddingEnd="12dp">
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_back"
+            android:background="@android:color/transparent"
+            android:contentDescription="Back"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🌾 Ration / रेशन"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:paddingStart="4dp"/>
+    </LinearLayout>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <!-- Info Card -->
+            <androidx.cardview.widget.CardView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/card_ration">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🌾  Ration Information / रेशन माहिती"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:layout_marginBottom="16dp"/>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:layout_marginBottom="10dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:text="Item / वस्तू :"
+                            android:textSize="13sp" android:textColor="@color/text_secondary"/>
+                        <TextView android:id="@+id/tvItem" android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_weight="2"
+                            android:textSize="14sp" android:textStyle="bold" android:textColor="@color/text_primary"/>
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:layout_marginBottom="10dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:text="Stock / साठा :"
+                            android:textSize="13sp" android:textColor="@color/text_secondary"/>
+                        <TextView android:id="@+id/tvStock" android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_weight="2"
+                            android:textSize="14sp" android:textStyle="bold" android:textColor="@color/green"/>
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:layout_marginBottom="10dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:text="Date / दिनांक :"
+                            android:textSize="13sp" android:textColor="@color/text_secondary"/>
+                        <TextView android:id="@+id/tvDate" android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_weight="2"
+                            android:textSize="14sp" android:textStyle="bold" android:textColor="@color/colorPrimary"/>
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:text="Note / टीप :"
+                            android:textSize="13sp" android:textColor="@color/text_secondary"/>
+                        <TextView android:id="@+id/tvNote" android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_weight="2"
+                            android:textSize="13sp" android:textColor="@color/text_secondary"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Admin Panel -->
+            <LinearLayout
+                android:id="@+id/adminPanel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/card_ration"
+                android:padding="14dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Update Ration Info / रेशन माहिती अपडेट करा"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_marginBottom="10dp"/>
+
+                <EditText android:id="@+id/etItem" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:hint="Item Name / वस्तूचे नाव *"
+                    android:background="@android:color/white" android:padding="10dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <EditText android:id="@+id/etStock" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:hint="Stock Status / साठा स्थिती *"
+                    android:background="@android:color/white" android:padding="10dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <EditText android:id="@+id/etDate" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:hint="Distribution Date / वितरण दिनांक *"
+                    android:background="@android:color/white" android:padding="10dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <EditText android:id="@+id/etNote" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:hint="Note / टीप (optional)"
+                    android:background="@android:color/white" android:padding="10dp"
+                    android:layout_marginBottom="10dp"/>
+
+                <Button android:id="@+id/btnUpdate" android:layout_width="match_parent"
+                    android:layout_height="44dp" android:text="Update / अपडेट करा"
+                    android:backgroundTint="@color/colorPrimary" android:textColor="@color/white"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
